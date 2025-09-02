@@ -214,70 +214,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &587400486
-PrefabInstance:
+--- !u!1 &2036660644
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036660646}
+  - component: {fileID: 2036660645}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2036660645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036660644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bb13e261269d349b678c15bd70db6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudLanePrefab: {fileID: 9045695015188077934, guid: f0b69d0072a48984ba6447c7c188707d, type: 3}
+  rainbowLanePrefab: {fileID: 3225944004408960732, guid: d37e56c7549a49a41bf40d64116c01e8, type: 3}
+  totalLanes: 50
+  laneHeight: 1
+  startY: 0
+  rainbowChance: 0.3
+--- !u!4 &2036660646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036660644}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1811494951923006113, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_Name
-      value: wolk pad
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.80685455
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0174
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -8.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124838832312444867, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 572b273ef95e09b4296d36b31e9c272a, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.378578, y: 11.077284, z: -0.08980942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 47149170}
-  - {fileID: 587400486}
+  - {fileID: 2036660646}
