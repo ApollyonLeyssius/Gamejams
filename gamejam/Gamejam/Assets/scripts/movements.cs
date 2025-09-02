@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class movements : MonoBehaviour
 {
     private float lastMoveTime = 0f;
     private float moveCooldown = 0.5f;
-    public TMP_Text score; // verander GameObject naar TMP_Text
+    public TMP_Text score;
     public float scorevalue = 0;
-    public GameObject camera;
+    public new GameObject camera;
 
     void Update()
     {
@@ -23,6 +25,11 @@ public class movements : MonoBehaviour
             scorevalue += 1;
             score.text = "" + scorevalue;
             camera.transform.Translate(0, 1f, 0);
+        }
+
+        if (scorevalue == 50)
+        {
+            SceneManager.LoadScene("win");
         }
 
 
@@ -40,4 +47,13 @@ public class movements : MonoBehaviour
             lastMoveTime = Time.time;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("killzone"))
+        {
+            SceneManager.LoadScene("Gameover");
+        }
     }
+
+}
