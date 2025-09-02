@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - killzone
   layers:
   - Default
   - TransparentFX
@@ -38,9 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: uit
-    uniqueID: 4011206321
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: uit
+    uniqueID: 4011206321
     locked: 0

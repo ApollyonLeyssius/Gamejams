@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    public float speed = 6f;                 // snelheid van de vogel
-    private Vector2 direction;
-    private SpriteRenderer spriteRenderer;
+    [Header("Settings")]
+    public float speed = 6f; // snelheid van de vogel
 
-    void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    [Header("Visuals")]
+    public Transform spriteChild; // sleep je Sprite child hier in de inspector
+
+    private Vector2 direction;
 
     void Start()
     {
-        // Kies random of de vogel van links of rechts komt
+        // Kies willekeurig of de vogel van links of rechts komt
         bool fromLeft = Random.value > 0.5f;
 
         if (fromLeft)
         {
-            transform.position = new Vector2(-10f, transform.position.y); // start links
+            // Startpositie links
+            transform.position = new Vector2(-10f, transform.position.y);
             direction = Vector2.right;
-            spriteRenderer.flipX = false; // kijkt naar rechts
+
+            // sprite draait 90 graden naar rechts
+            spriteChild.localRotation = Quaternion.Euler(0, 0, -90);
         }
         else
         {
-            transform.position = new Vector2(10f, transform.position.y);  // start rechts
+            // Startpositie rechts
+            transform.position = new Vector2(10f, transform.position.y);
             direction = Vector2.left;
-            spriteRenderer.flipX = true;  // kijkt naar links
+
+            // sprite draait 90 graden naar links
+            spriteChild.localRotation = Quaternion.Euler(0, 0, 90);
         }
+
+        // sprite kleiner maken
+        spriteChild.localScale = new Vector3(0.5f, 0.5f, 1f);
     }
 
     void Update()
@@ -37,7 +45,7 @@ public class Bird : MonoBehaviour
         // Beweeg de vogel
         transform.Translate(direction * speed * Time.deltaTime);
 
-        // Verwijder als vogel buiten beeld is
+        // Als de vogel buiten het scherm is → verwijderen
         if (Mathf.Abs(transform.position.x) > 15f)
         {
             Destroy(gameObject);
@@ -49,7 +57,10 @@ public class Bird : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Game Over!");
-            Destroy(other.gameObject); // speler verwijderen, later GameManager triggeren
+
+            // speler verwijderen (later vervangen met GameManager logica)
+            Destroy(other.gameObject);
         }
     }
 }
+
