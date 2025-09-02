@@ -5,7 +5,7 @@ using UnityEngine;
 public class BirdSpawner : MonoBehaviour
 {
     public GameObject birdPrefab;
-    public float spawnInterval = 2f;
+    public float spawnInterval = 5f;
     public float[] lanes = { 2f, 4f, 6f, 8f }; // Y-posities (paden)
 
     void Start()

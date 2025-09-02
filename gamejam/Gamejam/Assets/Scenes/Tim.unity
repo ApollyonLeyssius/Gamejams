@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdPrefab: {fileID: 1707722387015122255, guid: a3c3eb9816ea2ab4d886d5ea0e52860c, type: 3}
-  spawnInterval: 2
+  spawnInterval: 5
   lanes:
   - 2
   - 4
