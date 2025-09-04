@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 public class movements : MonoBehaviour
 {
     private float lastMoveTime = 0f;
-    private float moveCooldown = 0.5f;
+    private float moveCooldown = 0.25f;
     public TMP_Text score;
     public float scorevalue = 0;
     public new GameObject camera;
