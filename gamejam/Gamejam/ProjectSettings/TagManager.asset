@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - killzone
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Bird
+  - layers
+  - obstacles
   - 
   - 
   - 
@@ -42,6 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: uit
-    uniqueID: 4011206321
+  - name: rainbow
+    uniqueID: 1584737011
+    locked: 0
+  - name: wolk
+    uniqueID: 2553330043
+    locked: 0
+  - name: platfrom
+    uniqueID: 3927657271
+    locked: 0
+  - name: bird
+    uniqueID: 558922895
+    locked: 0
+  - name: player
+    uniqueID: 257870997
     locked: 0
